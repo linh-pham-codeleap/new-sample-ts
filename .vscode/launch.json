@@ -1,18 +1,20 @@
 {
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "Launch Program",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
-            "program": "${workspaceFolder}/index.ts",
-            "outFiles": [
-                "${workspaceFolder}/bin/**/*.js"
-            ],
-            "preLaunchTask": "tsc: build - tsconfig.json"
-        }
-    ]
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Program",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "outFiles": [
+        "${workspaceFolder}/bin/**/*.js"
+      ],
+      "console": "integratedTerminal",
+      // "preLaunchTask": "tsc: build - tsconfig.json",
+      "args": ["--trace-warnings", "-r", "dotenv/config", "-r", "ts-node/register", "-r", "tsconfig-paths/register", "--", "${workspaceFolder}/src/app.ts"]
+
+    }
+  ]
 }
