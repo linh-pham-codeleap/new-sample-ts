@@ -1,4 +1,4 @@
-# Backend CRUDL using Postgres and TypeScript
+# Backend CRUDL using Postgres and TypeScript test
 
 - **Data validation**: Use the `zod` library for validating input data.
 - **Logging**: Implement logging using `ts-log`.
